@@ -1,4 +1,4 @@
-# SSLCcommerz Payment Gateway Package for Laravel
+# SSLCommerz Payment Gateway Package for Laravel
 
 This package is built for [SSLCommerz](https://www.sslcommerz.com) online payment gateway in Bangladesh for Laravel 5.5+, 6.x and 7.x. (not tested for lower versions (< 5.5))
 
