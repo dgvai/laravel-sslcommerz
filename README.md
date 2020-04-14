@@ -5,7 +5,7 @@ This package is built for [SSLCommerz](https://www.sslcommerz.com) online paymen
 ## Contents
 
 - [Installation](#installation)
-	- [Publish assets](#publish-configuration)
+	- [Publish Configuration](#publish-configuration)
 	- [Setup and Configure](#setup-and-configure)
 - [Usage](#usage)
     - [Make Payment](#make-payment)
