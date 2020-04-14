@@ -276,31 +276,31 @@ Usage: ``$sslc->setShipping(5,'productname','24/7 Beijing Street','Dhaka',1234)`
 
 ### ``setAirlineTicketProfile($flight_type, $hours_till_departure, $pnr, $journey_from_to, $third_party_booking)`` <kbd>optional</kbd>
 
-Description: This method is Mandatory, if **product_profile** is *airline-tickets*! Not usually required! See Official [Documentation] (https://developer.sslcommerz.com/doc/v4/) for this section.
+Description: This method is Mandatory, if **product_profile** is *airline-tickets*! Not usually required! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
 Usage: ``$sslc->setAirlineTicketProfile('bus',3,1,'DHK-RAJ',null)``
 
 ### ``setTravelVerticalProfile($hotel_name, $length_of_stay, $check_in_time, $hotel_city)`` <kbd>optional</kbd>
 
-Description: This method is Mandatory, if **product_profile** is *travel-vertical*! Not usually required! See Official [Documentation] (https://developer.sslcommerz.com/doc/v4/) for this section.
+Description: This method is Mandatory, if **product_profile** is *travel-vertical*! Not usually required! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
 Usage: ``$sslc->setTravelVerticalProfile('Dalas',3,'12:00pm',Rajshahi)``
 
 ### ``setTelecomVerticleProfile($product_type, $topup_number, $country_topup)`` <kbd>optional</kbd>
 
-Description: This method is Mandatory, if **product_profile** is *telecom-vertical*! Not usually required! See Official [Documentation] (https://developer.sslcommerz.com/doc/v4/) for this section.
+Description: This method is Mandatory, if **product_profile** is *telecom-vertical*! Not usually required! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
 Usage: ``$sslc->setTelecomVerticleProfile('Flexiload',0170000000,'BD')``
 
 ### ``setCarts($cart, $product_amount, $vat, $discount_amount, $convenience_fee)`` <kbd>optional</kbd>
 
-Description: This method is not usually used! See Official [Documentation] (https://developer.sslcommerz.com/doc/v4/) for this section.
+Description: This method is not usually used! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
 Usage: ``$sslc->setCarts($cart_json,5,'3%','20%','500')``
 
 ### ``setExtras($extra1, $extra2, $extra3, $extra4)`` <kbd>optional</kbd>
 
-Description: This method is used to pass to the success/failure response as extra parameter, if it is needed. Not mandatory! See Official [Documentation] (https://developer.sslcommerz.com/doc/v4/) for this section.
+Description: This method is used to pass to the success/failure response as extra parameter, if it is needed. Not mandatory! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
 Usage: ``$sslc->setExtras($my_token)``
 
