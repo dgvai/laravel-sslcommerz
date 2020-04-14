@@ -1,5 +1,13 @@
 # SSLCommerz Payment Gateway Package for Laravel
 
+[![Latest Stable Version](https://poser.pugx.org/dgvai/laravel-sslcommerz/v/stable)](https://packagist.org/packages/dgvai/laravel-sslcommerz)
+[![Total Downloads](https://poser.pugx.org/dgvai/laravel-sslcommerz/downloads)](https://packagist.org/packages/dgvai/laravel-sslcommerz)
+[![Latest Unstable Version](https://poser.pugx.org/dgvai/laravel-sslcommerz/v/unstable)](https://packagist.org/packages/dgvai/laravel-sslcommerz)
+[![License](https://poser.pugx.org/dgvai/laravel-sslcommerz/license)](https://packagist.org/packages/dgvai/laravel-sslcommerz)
+[![Monthly Downloads](https://poser.pugx.org/dgvai/laravel-sslcommerz/d/monthly)](https://packagist.org/packages/dgvai/laravel-sslcommerz)
+[![Daily Downloads](https://poser.pugx.org/dgvai/laravel-sslcommerz/d/daily)](https://packagist.org/packages/dgvai/laravel-sslcommerz)
+[![composer.lock](https://poser.pugx.org/dgvai/laravel-sslcommerz/composerlock)](https://packagist.org/packages/dgvai/laravel-sslcommerz)
+
 This package is built for [SSLCommerz](https://www.sslcommerz.com) online payment gateway in Bangladesh for Laravel 5.5+, 6.x and 7.x. (not tested for lower versions (< 5.5))
 
 ## Contents
