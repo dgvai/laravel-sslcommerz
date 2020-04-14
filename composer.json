@@ -1,0 +1,28 @@
+{
+    "name": "dgvai/laravel-sslcommerz",
+    "description": "Laravel package of SSLCommerz",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jalal Uddin",
+            "email": "dgvai@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DGvai\\SSLCommerz\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DGvai\\SSLCommerz\\SSLCommerzServiceProvider"
+            ]
+        }
+    }
+}
