@@ -222,49 +222,49 @@ Also you can query for your Transaction based on the Transaction ID you provided
 
 ## Available Methods
 
-### ``amount($amount)`` <kbd>mandetory</kbd>
+###  <kbd>required</kbd> ``amount($amount)``
 
 Description: Set the amount of payment
 
 Usage: ``$sslc->amount(50)``
 
-### ``trxid($trxid = null)`` <kbd>mandetory</kbd>
+### <kbd>required</kbd> ``trxid($trxid = null)``
 
 Description: Set the Transaction ID. If ``null`` passed, php ``uniqid()`` will be used to generate the TrxID
 
 Usage: ``$sslc->trxid(mt_rand(10000000,999999999))``
 
-### ``product($name [,$category])`` <kbd>mandetory</kbd>
+### <kbd>required</kbd> ``product($name [,$category])`` 
 
 Description: Set the Product Name (required) and Category (optional)
 
 Usage: ``$sslc->product($product->name, $product->category)``
 
-### ``customer($name, $email [,$phone, $address, $city, $state, $postal, $country, $fax])`` <kbd>mandetory</kbd>
+### <kbd>required</kbd> ``customer($name, $email [,$phone, $address, $city, $state, $postal, $country, $fax])`` 
 
 Description: Set the Customer Name and Email (required), Phone,Address,City,State,Postal Code, Country, FAX Code (optional)
 
 Usage: ``$sslc->customer($user->name, $user->email, $user->phone)``
 
-### ``setUrl($url_array[])`` <kbd>optional</kbd>
+### <kbd>optional</kbd> ``setUrl($url_array[])`` 
 
 Description: To Manually set the success,failure,cancel and ipn URL not using from .env one
 
 Usage: ``$sslc->setUrl([route('custome.success'), route('custom.failure'), .. ])``
 
-### ``setCurrency($currency)`` <kbd>optional</kbd>
+### <kbd>optional</kbd> ``setCurrency($currency)`` 
 
 Description: To Manually set the currency not using from .env one
 
 Usage: ``$sslc->setCurrency('USD')``
 
-### ``setBin($bin)`` <kbd>optional</kbd>
+### <kbd>optional</kbd> ``setBin($bin)`` 
 
 Description: You can provide the BIN of card to allow the transaction must be completed by this BIN. You can declare by coma ',' separate of these BIN. Example: 371598,371599,376947,376948,376949
 
 Usage: ``$sslc->setBin('371598,371599,376947')``
 
-### ``enableEMI($installment, $max_installment, bool $restrict_emi_only = false)`` <kbd>optional</kbd>
+### <kbd>optional</kbd> ``enableEMI($installment, $max_installment, bool $restrict_emi_only = false)`` 
 
 Description: This method enables EMI payment. 
 
@@ -276,37 +276,37 @@ Description: This method enables EMI payment.
 
 Usage: ``$sslc->enableEMI(5,12,false)``
 
-### ``setShipping($product_number, $name, $address, $city [,$postal, $state, $country])`` <kbd>optional</kbd>
+### <kbd>optional</kbd> ``setShipping($product_number, $name, $address, $city [,$postal, $state, $country])`` 
 
 Description: This method sets shipping details. Not required usually!
 
 Usage: ``$sslc->setShipping(5,'productname','24/7 Beijing Street','Dhaka',1234)``
 
-### ``setAirlineTicketProfile($flight_type, $hours_till_departure, $pnr, $journey_from_to, $third_party_booking)`` <kbd>optional</kbd>
+### <kbd>optional</kbd> ``setAirlineTicketProfile($flight_type, $hours_till_departure, $pnr, $journey_from_to, $third_party_booking)`` 
 
 Description: This method is Mandatory, if **product_profile** is *airline-tickets*! Not usually required! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
 Usage: ``$sslc->setAirlineTicketProfile('bus',3,1,'DHK-RAJ',null)``
 
-### ``setTravelVerticalProfile($hotel_name, $length_of_stay, $check_in_time, $hotel_city)`` <kbd>optional</kbd>
+### <kbd>optional</kbd> ``setTravelVerticalProfile($hotel_name, $length_of_stay, $check_in_time, $hotel_city)`` 
 
 Description: This method is Mandatory, if **product_profile** is *travel-vertical*! Not usually required! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
 Usage: ``$sslc->setTravelVerticalProfile('Dalas',3,'12:00pm',Rajshahi)``
 
-### ``setTelecomVerticleProfile($product_type, $topup_number, $country_topup)`` <kbd>optional</kbd>
+### <kbd>optional</kbd> ``setTelecomVerticleProfile($product_type, $topup_number, $country_topup)`` 
 
 Description: This method is Mandatory, if **product_profile** is *telecom-vertical*! Not usually required! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
 Usage: ``$sslc->setTelecomVerticleProfile('Flexiload',0170000000,'BD')``
 
-### ``setCarts($cart, $product_amount, $vat, $discount_amount, $convenience_fee)`` <kbd>optional</kbd>
+### <kbd>optional</kbd> ``setCarts($cart, $product_amount, $vat, $discount_amount, $convenience_fee)`` 
 
 Description: This method is not usually used! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
 Usage: ``$sslc->setCarts($cart_json,5,'3%','20%','500')``
 
-### ``setExtras($extra1, $extra2, $extra3, $extra4)`` <kbd>optional</kbd>
+### <kbd>optional</kbd> ``setExtras($extra1, $extra2, $extra3, $extra4)`` 
 
 Description: This method is used to pass to the success/failure response as extra parameter, if it is needed. Not mandatory! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
