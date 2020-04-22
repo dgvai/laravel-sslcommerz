@@ -228,7 +228,7 @@ class SSLCommerz extends SSLCommerzParams
                     $answer = ['status' => true, 'refund_state' => $output->status, 'ref_id' => $output->refund_ref_id, 'output' => $output];
                 }
 
-                return json_encode($answer);
+                return json_decode(json_encode($answer));
 
             }
             catch(RequestException $ex)
@@ -284,7 +284,7 @@ class SSLCommerz extends SSLCommerzParams
                     $answer = ['status' => true, 'refund_state' => $output->status, 'ref_id' => $output->refund_ref_id, 'output' => $output];
                 }
 
-                return json_encode($answer);
+                return json_decode(json_encode($answer));
 
             }
             catch(RequestException $ex)
@@ -340,7 +340,7 @@ class SSLCommerz extends SSLCommerzParams
                     $answer = ['status' => true, 'output' => $output];
                 }
 
-                return json_encode($answer);
+                return json_decode(json_encode($answer));
 
             }
             catch(RequestException $ex)

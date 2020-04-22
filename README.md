@@ -134,8 +134,11 @@ Also you can call for Refund Request and check Refund State
 
     public function refund($bankID)
     {
+        /** 
+         * SSLCommerz::refund($bank_trans_id, $amount [,$reason])
+         */
+
         $refund = SSLCommerz::refund($bankID,$refund_amount);
-	$refund = json_decode($refund);
 
         if($refund->status)
         {
@@ -169,7 +172,6 @@ Also you can call for Refund Request and check Refund State
     public function check_refund_status($refID)
     {
         $refund = SSLCommerz::query_refund($refID);
-	$refund = json_decode($refund);
 	
         if($refund->status)
         {
@@ -209,7 +211,6 @@ Also you can query for your Transaction based on the Transaction ID you provided
     public function get_transaction_status($trxID)
     {
         $query = SSLCommerz::query_transaction($trxID);
-	$query = json_decode($query);
 	
         if($query->status)
         {
