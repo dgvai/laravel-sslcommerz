@@ -100,6 +100,12 @@ class PaymentController extends Controller
             ->product('Demo Product Name')
             ->customer('Customer Name','custemail@email.com');
         return $sslc->make_payment();
+
+        /**
+         * 
+         *  USE:  $sslc->make_payment(true) FOR CHECKOUT INTEGRATION
+         * 
+         * */
     }
 
     public function success(Request $request)
@@ -315,6 +321,12 @@ Usage: ``$sslc->setCarts($cart_json,5,'3%','20%','500')``
 Description: This method is used to pass to the success/failure response as extra parameter, if it is needed. Not mandatory! See [Official Documentation](https://developer.sslcommerz.com/doc/v4/) for this section.
 
 Usage: ``$sslc->setExtras($my_token)``
+
+###  <kbd>required</kbd> ``make_payment($checkout = false)``
+
+Description: Make the payment. 1. For hosted mode (default), pass nothing/false. 2. For checkout mode, pass the first param ``true``, and it will return JSON
+
+Usage: ``$sslc->make_payment()``
 
 ## Changelog
 

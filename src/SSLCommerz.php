@@ -29,7 +29,7 @@ class SSLCommerz extends SSLCommerzParams
         $this->__initialize_defaults();
     }
 
-    public function make_payment()
+    public function make_payment($initiate_only = false)
     {
         try 
         {
@@ -41,7 +41,9 @@ class SSLCommerz extends SSLCommerzParams
 
             try 
             {
-                $response = $client->post(config('sslcommerz.path.endpoint.make_payment'),['form_params' => $this->makeBody()]);
+                $response = $client->post(config('sslcommerz.path.endpoint.make_payment'),[
+                        'form_params' => $this->makeBody()
+                    ]);
                 $output = json_decode($response->getBody()->getContents());
 
                 if($output->status == 'FAILED')
@@ -50,7 +52,9 @@ class SSLCommerz extends SSLCommerzParams
                 }
                 else 
                 {
-                    return redirect()->to($output->GatewayPageURL);
+                    return $initiate_only 
+                    ? json_encode(['status' => 'success', 'data' => $output->GatewayPageURL, 'logo' => $output->storeLogo])
+                    : redirect()->to($output->GatewayPageURL);
                 }
 
             }
