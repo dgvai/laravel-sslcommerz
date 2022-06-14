@@ -28,7 +28,7 @@ This package is built for [SSLCommerz](https://www.sslcommerz.com) online paymen
 You can install the package via composer:
 
 ``` bash
-    composer require dgvai/laravel-sslcommerz
+composer require dgvai/laravel-sslcommerz
 ```
 
 ### Publish Configuration
@@ -36,7 +36,7 @@ You can install the package via composer:
 Publish configuration file
 
 ```bash
-    php artisan vendor:publish --tag=sslc-config
+php artisan vendor:publish --tag=sslc-config
 ```
 
 ### Setup and configure
@@ -48,7 +48,7 @@ Update your app environment (.env)
     SSLC_STORE_CURRENCY     =   [STORE CURRENCY eg. BDT]
     SSLC_ROUTE_SUCCESS      =   [route name of success_url, eg: payment.success]
     SSLC_ROUTE_FAILURE      =   [eg: payment.failure]
-    SSLC_ROUTE_CANCE        =   [eg: payment.cancel]
+    SSLC_ROUTE_CANCEL        =   [eg: payment.cancel]
     SSLC_ROUTE_IPN          =   [eg: payment.ipn]
     SSLC_ALLOW_LOCALHOST    =   [TRUE/FALSE]
 ```
@@ -73,7 +73,7 @@ Add exception in ``app\Http\Middleware\VerifyCsrfToken.php``
 
 After done configuraing
 ```bash
-    php artisan config:cache
+php artisan config:cache
 ```
 
 ## Usage
