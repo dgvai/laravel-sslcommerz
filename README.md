@@ -48,7 +48,7 @@ Update your app environment (.env)
     SSLC_STORE_CURRENCY     =   [STORE CURRENCY eg. BDT]
     SSLC_ROUTE_SUCCESS      =   [route name of success_url, eg: payment.success]
     SSLC_ROUTE_FAILURE      =   [eg: payment.failure]
-    SSLC_ROUTE_CANCE        =   [eg: payment.cancel]
+    SSLC_ROUTE_CANCEL        =   [eg: payment.cancel]
     SSLC_ROUTE_IPN          =   [eg: payment.ipn]
     SSLC_ALLOW_LOCALHOST    =   [TRUE/FALSE]
 ```
@@ -57,8 +57,8 @@ Update your app environment (.env)
 Create four ``POST`` routes for SSLCommerz
 ```php
     Route::post('sslcommerz/success','PaymentController@success')->name('payment.success');
-    Route::post('sslcommerz/failure','PaymentController@failure')->name('failure');
-    Route::post('sslcommerz/cancel','PaymentController@cancel')->name('cancel');
+    Route::post('sslcommerz/failure','PaymentController@failure')->name('payment.failure');
+    Route::post('sslcommerz/cancel','PaymentController@cancel')->name('payment.cancel');
     Route::post('sslcommerz/ipn','PaymentController@ipn')->name('payment.ipn');
 ```
 **NOTE** These named routes are being used in .env file
